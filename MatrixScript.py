@@ -28,5 +28,5 @@ for j in range(m):
         mystr+=matrix[i][j]
         
 
-mystr=re.sub(r'\b[^a-zA-Z\d\s]+',' ',mystr,re.DOTALL) #/b -> word boundary, ^ -> negate, [] -> capture group, + -> one or more occurrence, re.DOTALL -> find all matches (global mode)
+mystr=re.sub(r'\b[^a-zA-Z0-9]+\b',' ',mystr,re.DOTALL) #/b -> word boundary, ^ -> negate, [] -> capture group, + -> one or more occurrence, re.DOTALL -> find all matches (global mode)
 print(mystr)
